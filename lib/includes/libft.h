@@ -13,8 +13,6 @@ void	ft_putstr(const char *str);
 void	ft_putnbr(int nb);
 void	ft_ftoa(float f, char *dest, int ap);
 
-int		ft_pow(int x, ui y);
-
 char	*ft_strchr(const char *dest, const char ch);
 
 #endif
