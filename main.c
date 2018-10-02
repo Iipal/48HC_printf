@@ -23,7 +23,7 @@ void	ft_pf_output(const char *format, va_list *argp)
 			if (format[i + 1] == 'g')
 			{
 				d = (char *)malloc(sizeof(char) * 4 + 1);
-				ft_ftoa(va_arg(argp, double), d, 5);
+				ft_ftoa(va_arg(argp, double), d, 4);
 				ft_putstr(d);
 			}
 			i += 2;
@@ -54,4 +54,5 @@ int		main(void)
 	ft_printf("test c(\'W\') and s(\"orld\")\t| Hello, %c%s\n", 'W', "orld!");
 	ft_printf("test only d(\'42\')\t\t| %d\n", 42);
 	ft_printf("test only g(\'42.21\')\t\t| %g\n", 42.21);
+	ft_printf("test only g(\'54.0034\')\t\t| %g\n", 54.0034);
 }

@@ -29,3 +29,6 @@ clean:
 fclean: clean
 	$(DEL) libft.a
 	$(DEL) $P
+re: fclean all
+
+.PHONY: re fclean clean $P libft all
