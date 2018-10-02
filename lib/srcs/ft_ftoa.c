@@ -1,6 +1,6 @@
 #include "../includes/libft.h"
 
-void	ft_strswap(char *str, int len)
+void	ft_strswap(string str, int len)
 {
 	int	i;
 	int j;
@@ -19,7 +19,7 @@ void	ft_strswap(char *str, int len)
 	}
 }
 
-int		ft_strint(int x, char str[], int d)
+int		ft_strint(int x, string str, int d)
 {
 	int	i;
 
@@ -49,19 +49,19 @@ int		ft_pow(int x, ui y)
 		return (x * tmp * tmp);
 }
 
-void	ft_ftoa(float f, char *dest, int ap)
+void	ft_ftoa(double d, string dest, int after_point)
 {
-	int		i_p;
-	float	f_p;
+	int		i_part;
+	float	d_part;
 	int		i;
 
-	i_p = (int)f;
-	f_p = f - (float)i_p;
-	i = ft_strint(i_p, dest, 0);
-	if (ap != 0)
+	i_part = (int)d;
+	d_part = d - (double)i_part;
+	i = ft_strint(i_part, dest, 0);
+	if (after_point != 0)
 	{
 		dest[i] = '.';
-		f_p = f_p * ft_pow(10, ap);
-		ft_strint((int)f_p, dest + i + 1, ap);
+		d_part *= ft_pow(10, after_point);
+		ft_strint((int)d_part, dest + i + 1, after_point);
 	}
 }

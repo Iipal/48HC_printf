@@ -7,12 +7,13 @@
 
 typedef unsigned long long	ull;
 typedef unsigned int		ui;
+typedef char*				string;
 
 void	ft_putchar(const char ch);
-void	ft_putstr(const char *str);
+void	ft_putstr(const string str);
 void	ft_putnbr(int nb);
-void	ft_ftoa(float f, char *dest, int ap);
+void	ft_ftoa(double d, string dest, int after_point);
 
-char	*ft_strchr(const char *dest, const char ch);
+string	ft_strchr(const string dest, const char ch);
 
 #endif
