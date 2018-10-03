@@ -15,6 +15,7 @@ void	ft_pf_out_valid(const char ch_act, va_list *argp)
 			ft_ftoa(va_arg(argp, double), d_str, 8);
 			ft_putstr(d_str);
 		}
+		free(d_str);
 	}
 }
 
