@@ -1,7 +1,7 @@
 P = ft_printf
 CC = gcc
 CL = ar rcs
-CFLAGS = -g -Wall -Wextra -Werror -Wno-return-type -Wno-unused-result -O0
+CFLAGS = -Wall -Wextra -Werror -Wno-return-type -Wno-unused-result -Ofast
 P_INCLUDE = -include lib/includes/libft.h
 
 LIBDIR = lib/srcs/
