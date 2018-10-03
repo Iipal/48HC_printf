@@ -12,7 +12,7 @@ void	ft_pf_out_valid(const char ch_act, va_list *argp)
 	{
 		if ((d_str = (string)malloc(sizeof(char) * 32 + 1)) != NULL)
 		{
-			ft_ftoa(va_arg(argp, double), d_str, 10);
+			ft_ftoa(va_arg(argp, double), d_str, 8);
 			ft_putstr(d_str);
 		}
 	}
