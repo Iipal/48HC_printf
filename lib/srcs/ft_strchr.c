@@ -1,6 +1,6 @@
 #include "../includes/libft.h"
 
-char	*ft_strchr(const string dest, const char ch)
+string	ft_strchr(const string dest, const char ch)
 {
 	ull	i;
 
