@@ -17,6 +17,8 @@ void	ft_pf_out_valid(const char ch_act, va_list *argp)
 		}
 		free(d_str);
 	}
+	else if (ch_act == '%')
+		ft_putchar('%');
 }
 
 void	ft_pf_output(const string format, va_list *argp)
@@ -57,14 +59,14 @@ int		main(void)
 {
 	double d = 12345678.12345678;
 	ft_printf("empty va_\t\t\t| %c\n");
+	ft_printf("test double percent flags\t| %%\n");
 	ft_printf("only string without arg's\t| Hello, World!\n");
 	ft_printf("test only c(\'!\')\t\t| Hello, World%c\n", '!');
 	ft_printf("test only s(\"World!\")\t\t| Hello, %s\n", "World!");
 	ft_printf("test c(\'W\') and s(\"orld\")\t| Hello, %c%s\n", 'W', "orld!");
 	ft_printf("test only d(\'42\')\t\t| %d\n", 42);
 	ft_printf("test only g(\'42.21\')\t\t| %g\n", 42.21);
-	ft_printf("test only g(\'54.0034\')\t\t| %g\n", 54.0034);
 	ft_printf("test double value \t\t| %g\n", d);
-	ft_printf("test alot of d\t\t\t| %d%d%d%d\n", 1, 2, 3, 4);
+	ft_printf("test alot of d\t\t\t| %d-%d-%d-%d\n", 1, 2, 3, 4);
 	ft_printf("My name is %s and i'm %d years old.\n", "Taras", 17);
 }
