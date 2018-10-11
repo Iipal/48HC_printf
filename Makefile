@@ -1,5 +1,5 @@
 P = ft_printf
-CC = gcc
+CC = gcc -march=native
 CL = ar rcs
 CFLAGS = -Wall -Wextra -Werror -Wno-return-type -Wno-unused-result -Ofast
 P_INCLUDE = -include lib/includes/libft.h
@@ -12,7 +12,7 @@ LIBSRC_FT = $(LIBDIR)ft_putchar.c $(LIBDIR)ft_putstr.c \
 			$(LIBDIR)ft_ftoa.c
 LIBSRC_FT_O = ft_putchar.o ft_putstr.o ft_strchr.o ft_putnbr.o ft_ftoa.o
 
-DEL = rm -rf
+DEL = rm -rfv
 
 all: libft $P
 
@@ -24,11 +24,11 @@ $P:
 	$(CC) $(P_INCLUDE) $(CFLAGS) main.c -o $P -L. -lft
 
 clean:
-	$(DEL) *.o
+	@$(DEL) *.o
 
 fclean: clean
-	$(DEL) libft.a
-	$(DEL) $P
+	@$(DEL) libft.a
+	@$(DEL) $P
 re: fclean all
 
 .PHONY: re fclean clean $P libft all
